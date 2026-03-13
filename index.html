@@ -305,19 +305,6 @@
                 if(document.getElementById('user-profile')) document.getElementById('user-profile').style.display = 'none';
             }
         });
-
-        // BÙA CHÚ CHẶN F12 & CHUỘT PHẢI
-        window.addEventListener('keydown', function(e) {
-            if (e.key === 'F12' || e.keyCode === 123 || 
-               (e.ctrlKey && e.shiftKey && (e.key === 'I' || e.key === 'J' || e.key === 'C')) || 
-               (e.ctrlKey && e.key === 'U')) {
-                e.preventDefault();
-                e.stopPropagation();
-                return false;
-            }
-        }, true);
-        
-        document.addEventListener('contextmenu', function(e) { e.preventDefault(); });
     </script>
 </body>
 </html>

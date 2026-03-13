@@ -662,19 +662,6 @@
                 }
             };
 
-        // KHIÊN CHẮN DEVTOOLS CẤP ĐỘ CAO
-            window.addEventListener('keydown', function(e) {
-                if (e.key === 'F12' || e.keyCode === 123 || 
-                   (e.ctrlKey && e.shiftKey && (e.key === 'I' || e.key === 'J' || e.key === 'C')) || 
-                   (e.ctrlKey && e.key === 'U')) {
-                    e.preventDefault();
-                    e.stopPropagation();
-                    return false;
-                }
-            }, true); // Chặn ngay từ vòng gửi xe
-            
-            document.addEventListener('contextmenu', function(e) { e.preventDefault(); });
-
             window.showToast = function(title, message, type = 'success') {
                 // Tạo cái hộp chứa nếu chưa có
                 let container = document.getElementById('toast-container');

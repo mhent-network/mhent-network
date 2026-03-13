@@ -777,19 +777,6 @@
                 backToTopBtn.addEventListener("click", () => { window.scrollTo({ top: 0, behavior: "smooth" }); });
             }
 
-            // KHIÊN CHẮN DEVTOOLS CẤP ĐỘ CAO
-            window.addEventListener('keydown', function(e) {
-                if (e.key === 'F12' || e.keyCode === 123 || 
-                   (e.ctrlKey && e.shiftKey && (e.key === 'I' || e.key === 'J' || e.key === 'C')) || 
-                   (e.ctrlKey && e.key === 'U')) {
-                    e.preventDefault();
-                    e.stopPropagation();
-                    return false;
-                }
-            }, true); // Chặn ngay từ vòng gửi xe
-            
-            document.addEventListener('contextmenu', function(e) { e.preventDefault(); });
-
             // HÀM BẬT/TẮT MENU TRÊN ĐIỆN THOẠI
             window.toggleMobileMenu = function() {
                 const navLinks = document.getElementById('nav-links');

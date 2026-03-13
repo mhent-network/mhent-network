@@ -295,13 +295,6 @@
 
         if ('scrollRestoration' in history) { history.scrollRestoration = 'manual'; }
         window.scrollTo(0, 0);
-
-        window.addEventListener('keydown', function(e) {
-            if (e.key === 'F12' || e.keyCode === 123 || (e.ctrlKey && e.shiftKey && (e.key === 'I' || e.key === 'J' || e.key === 'C')) || (e.ctrlKey && e.key === 'U')) {
-                e.preventDefault(); e.stopPropagation(); return false;
-            }
-        }, true);
-        document.addEventListener('contextmenu', function(e) { e.preventDefault(); });
     </script>
 </body>
 </html>
